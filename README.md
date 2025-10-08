@@ -38,7 +38,7 @@ committedEditIdExpiryTimeSeconds | COMMITTED_EDIT_ID_EXPIRY_TIME_SECONDS | Time 
 The below example publishes `MyApp` to Google Play, targetting 33% (`0.33`) of users with a priority of `2`.
 
 ```yaml
-uses: r0adkll/upload-google-play@v1
+uses: emertozd/upload-google-play@v1
 with:
   serviceAccountJsonPlainText: ${{ SERVICE_ACCOUNT_JSON }}
   packageName: com.example.MyApp
@@ -106,7 +106,7 @@ You may have not yet promoted any AAB/APK through internal‑testing, alpha or b
 Before you can target `production`, push at least one release through an earlier track. For example:
 
 ```yaml
-uses: r0adkll/upload-google-play@v1
+uses: emertozd/upload-google-play@v1
 with:
   # ... other configurations ...
   track: internal

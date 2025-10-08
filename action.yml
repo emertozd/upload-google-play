@@ -1,6 +1,6 @@
 name: 'Upload Android Release to Play Store'
 description: "An action to upload a signed Android release (.apk or .aab) to the Google Play Store Developer Console"
-author: 'r0adkll'
+author: 'emertozd'
 branding:
   icon: 'truck'
   color: 'orange'
@@ -60,6 +60,8 @@ inputs:
 outputs:
   internalSharingDownloadUrl:
     description: "The internal app sharing download url if track was 'internalsharing'"
+  errorMessage:
+    description: "The error message if the action failed"
 runs:
   using: 'node20'
   main: 'lib/index.js'

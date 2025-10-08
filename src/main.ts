@@ -93,9 +93,14 @@ export async function run() {
         )
     } catch (error: unknown) {
         if (error instanceof Error) {
+            core.setOutput("errorMessage", error.message);
+            core.exportVariable("ERROR_MESSAGE", error.message);
             core.setFailed(error.message)
         } else {
-            core.setFailed('Unknown error occurred.')
+            const errorMsg = 'Unknown error occurred.';
+            core.setOutput("errorMessage", errorMsg);
+            core.exportVariable("ERROR_MESSAGE", errorMsg);
+            core.setFailed(errorMsg)
         }
     } finally {
         if (core.getInput('serviceAccountJsonPlainText', { required: false})) {
