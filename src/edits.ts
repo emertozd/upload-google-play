@@ -128,6 +128,8 @@ async function uploadToPlayStore(options: EditOptions, releaseFiles: string[]): 
 		
             return res.data.id
         } else {
+            core.setOutput("errorMessage", res.statusText);
+            core.exportVariable("ERROR_MESSAGE", res.statusText);
             core.setFailed(`Error ${res.status}: ${res.statusText}`);
             return Promise.reject(res.status);
         }

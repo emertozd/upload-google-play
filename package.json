@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r0adkll/upload-google-play.git"
+    "url": "git+https://github.com/emertozd/upload-google-play.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "r0adkll",
+  "author": "emertozd",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1",
